@@ -1,0 +1,25 @@
+delete from ui.tasklhsmap where itenantid = 25 and iworkflowid = 25;
+
+INSERT INTO ui.tasklhsmap VALUES (0, 2, 2, 25, 8, '{"tag": "span", "path": "this.name", "type": "default"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (0, 2, 1, 25, 8, '{"tag": "span", "path": "this.name", "type": "default"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (0, 0, 2, 25, 4, '{"tag": "span", "path": "this.variables.TicketID", "type": "ticketid"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (0, 0, 1, 25, 4, '{"tag": "span", "path": "this.variables.TicketID", "type": "ticketid"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (0, 0, 3, 25, 4, '{"tag": "span", "path": "this.variables.TicketID", "type": "ticketid"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (1, 0, 1, 25, 6, '{"tag": "span", "path": "this.created", "type": "timestamp"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (1, 0, 2, 25, 6, '{"tag": "span", "path": "this.created", "type": "timestamp"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (1, 2, 2, 25, 4, '{"tag": "span", "path": "this.variables.WorkflowName", "type": "default", "className": "d-block text-right normal-span-text"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (1, 2, 1, 25, 4, '{"tag": "span", "path": "this.variables.WorkflowName", "type": "default", "className": "d-block text-right normal-span-text"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (2, 0, 1, 25, 2, '{"tag": "span", "path": "this.variables.triggeredtype", "type": "default", "className": "d-block text-right"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (0, 1, 1, 25, 12, '{"tag": "h4", "path": "this.variables.payeeName", "type": "default"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (2, 0, 2, 25, 2, '{"tag": "span", "path": "this.variables.triggeredtype", "type": "default", "className": "d-block text-right"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (2, 0, 3, 25, 2, '{"tag": "span", "path": "this.variables.triggeredtype", "type": "default", "className": "d-block text-right"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (0, 2, 3, 25, 8, '{"tag": "span", "path": "this.name", "type": "default"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (0, 1, 2, 25, 12, '{"tag": "h4", "path": "this.variables.payeeName", "type": "default"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (0, 1, 3, 25, 12, '{"tag": "h4", "path": "this.variables.payeeName", "type": "default"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (1, 2, 3, 25, 4, '{"tag": "span", "path": "this.variables.WorkflowName", "type": "default", "className": "d-block text-right normal-span-text"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (1, 0, 3, 25, 6, '{"tag": "span", "path": "this.startTime", "type": "timestamp"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (0, 0, 4, 25, 4, '{"tag": "span", "path": "this.variables.TicketID", "type": "ticketid"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (1, 0, 4, 25, 6, '{"tag": "span", "path": "this.created", "type": "timestamp"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (0, 1, 4, 25, 8, '{"tag": "h4", "path": "this.variables.payeeName", "type": "default"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (2, 0, 4, 25, 2, '{"tag": "span", "path": "this.variables.triggeredtype", "type": "default", "className": "d-block text-right"}', 25);
+INSERT INTO ui.tasklhsmap VALUES (1, 1, 4, 25, 4, '{"tag": "span", "path": "this.variables.WorkflowName", "type": "default", "className": "d-block text-right normal-span-text"}', 25);

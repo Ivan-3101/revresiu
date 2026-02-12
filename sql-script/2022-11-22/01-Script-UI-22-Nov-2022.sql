@@ -1,0 +1,23 @@
+INSERT INTO ui.roledesc (iroleid, dtapproverstamp, dtentrystamp, vcrolename, iapproveruserid, ientryuserid, istatus) VALUES (6, NULL, '2022-11-22 12:30:14.445', 'DB', NULL, NULL, 1);
+INSERT INTO ui.roledesc (iroleid, dtapproverstamp, dtentrystamp, vcrolename, iapproveruserid, ientryuserid, istatus) VALUES (7, NULL, '2022-11-22 12:30:14.445', 'Branch', NULL, NULL, 1);
+
+INSERT INTO ui.groupdesc (igroupid, dtapproverstamp, dtentrystamp, vcgroupid, vcgroupname, vcgrouptype, iapproveruserid, ientryuserid, istatus) VALUES (1022, NULL, NULL, 'level1', 'L1', 'WORKFLOW', NULL, NULL, 1);
+INSERT INTO ui.groupdesc (igroupid, dtapproverstamp, dtentrystamp, vcgroupid, vcgroupname, vcgrouptype, iapproveruserid, ientryuserid, istatus) VALUES (1023, NULL, NULL, 'level2', 'L2', 'WORKFLOW', NULL, NULL, 1);
+INSERT INTO ui.groupdesc (igroupid, dtapproverstamp, dtentrystamp, vcgroupid, vcgroupname, vcgrouptype, iapproveruserid, ientryuserid, istatus) VALUES (1024, NULL, NULL, 'level3', 'L3', 'WORKFLOW', NULL, NULL, 1);
+INSERT INTO ui.groupdesc (igroupid, dtapproverstamp, dtentrystamp, vcgroupid, vcgroupname, vcgrouptype, iapproveruserid, ientryuserid, istatus) VALUES (1025, NULL, NULL, 'level4', 'L4', 'WORKFLOW', NULL, NULL, 1);
+INSERT INTO ui.groupdesc (igroupid, dtapproverstamp, dtentrystamp, vcgroupid, vcgroupname, vcgrouptype, iapproveruserid, ientryuserid, istatus) VALUES (1026, NULL, NULL, 'level5', 'L5', 'WORKFLOW', NULL, NULL, 1);
+INSERT INTO ui.groupdesc (igroupid, dtapproverstamp, dtentrystamp, vcgroupid, vcgroupname, vcgrouptype, iapproveruserid, ientryuserid, istatus) VALUES (1027, NULL, NULL, 'db', 'DB', 'WORKFLOW', NULL, NULL, 1);
+INSERT INTO ui.groupdesc (igroupid, dtapproverstamp, dtentrystamp, vcgroupid, vcgroupname, vcgrouptype, iapproveruserid, ientryuserid, istatus) VALUES (1028, NULL, NULL, 'branch', 'Branch', 'WORKFLOW', NULL, NULL, 1);
+
+INSERT INTO ui.rolemenuaccessmap (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid) VALUES (675, true, true, true, true, true, true, NULL, NULL, true, NULL, NULL, 479, 6);
+INSERT INTO ui.rolemenuaccessmap (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid) VALUES (676, true, true, true, true, true, true, NULL, NULL, true, NULL, NULL, 494, 6);
+INSERT INTO ui.rolemenuaccessmap (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid) VALUES (677, true, true, true, true, true, true, NULL, NULL, true, NULL, NULL, 479, 7);
+INSERT INTO ui.rolemenuaccessmap (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid) VALUES (678, true, true, true, true, true, true, NULL, NULL, true, NULL, NULL, 494, 7);
+
+INSERT INTO ui.rolemenuaccessmap (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid) VALUES (679, true, true, true, true, true, false, NULL, NULL, true, NULL, NULL, 482, 7);
+INSERT INTO ui.rolemenuaccessmap (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid) VALUES (680, true, true, true, true, true, false, NULL, NULL, true, NULL, NULL, 501, 7);
+INSERT INTO ui.rolemenuaccessmap (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid) VALUES (681, true, true, true, true, true, true, NULL, NULL, true, NULL, NULL, 514, 7);
+
+INSERT INTO ui.rolemenuaccessmap (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid) VALUES (682, true, true, true, true, true, false, NULL, NULL, true, NULL, NULL, 482, 6);
+INSERT INTO ui.rolemenuaccessmap (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid) VALUES (683, true, true, true, true, true, false, NULL, NULL, true, NULL, NULL, 501, 6);
+INSERT INTO ui.rolemenuaccessmap (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid) VALUES (684, true, true, true, true, true, true, NULL, NULL, true, NULL, NULL, 514, 6);

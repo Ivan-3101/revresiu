@@ -1,0 +1,1 @@
+delete from ui.dashboardresultset where idashboardid = 61 and itenantid = 24;

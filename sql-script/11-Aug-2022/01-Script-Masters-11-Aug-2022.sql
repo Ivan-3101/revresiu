@@ -1,0 +1,1 @@
+UPDATE masters.decisions SET irecordstatus=1-irecordstatus;

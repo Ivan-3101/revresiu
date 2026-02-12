@@ -1,0 +1,19 @@
+UPDATE ui.dashboardquery SET vcdashboardquery='{
+	"Account":"select iaccountid, icustomerid, vcexternalaccountid, iaccounttypeid, vcifsc, vcaccountproviderid, vcaccountname, dtonboardingdate, dtexpirydate, imcc, bmerchant, bverified, irecordstatus, dtentrydatetime from masters.accounts order by dtentrydatetime desc limit 50000",
+	"VPA": "select ivpaid, iaccountid, vcexternaladdressid, vcaddress, iproductid, vcvpaname, bverified, imcc, dtonboardingdate, dtexpirydate, bmerchant, ivpaproviderid, bprofiled, dtfirsttransaction, dtlasttransaction, irecordstatus, dtentrydatetime from masters.vpa order by dtentrydatetime desc limit 50000",
+	"Customer": "SELECT icustomerid, vcexternalcustid, vccustomername, vccustomertype, vcsalutation, vcverifiedname, vcgender, dtdoidob, dtonboardingdate, vcpostalcode, vcemail, vcregisteredmobile, imcc, vcidentitytype1, vcidentitydetails1, vcidentitytype2, vcidentitydetails2, vcregisteredaddressgeolocation, iadm3, iadm2, iadm1, vccountrycode, vcattribs->''yb_raw''->>''pan'' as \"PAN\", vcattribs->''yb_raw''->>''city'' as \"City\", vcattribs->''yb_raw''->>''gstn'' as \"GSTN\", vcattribs->''yb_raw''->>''state'' as \"State\", vcattribs->''yb_raw''->>''pinCode'' as \"Pin Code\", vcattribs->''yb_raw''->>''district'' as \"District\", vcattribs->''yb_raw''->>''latitude'' as \"Latitude\", vcattribs->''yb_raw''->>''longitude'' as \"Longitude\", vcattribs->''yb_raw''->>''partnerName'' as \"Partner Name\", vcattribs->''yb_raw''->>''businessName'' as \"Business Name\", vcattribs->''yb_raw''->>''mobileNumber'' as \"Mobile No.\", vcattribs->''yb_raw''->>''sellerVerifiedAccountName'' as \"Verified Acc. Name\", vcattribs->''yb_raw''->>''turnOverType'' as \"Turnover Type\", irecordstatus, dtentrydatetime FROM masters.customers :AttribsForm order by dtentrydatetime desc limit 50000;"
+}'::TEXT, formattingrequiered=false WHERE idashboardqueryid=48;
+
+DELETE FROM ui.masterextractattribs;
+INSERT INTO ui.masterextractattribs (attribpath, level, datatype, displayname) VALUES ('vcattribs->''yb_raw''->>''pan'' ', 'Customer', 'String', 'PAN');
+INSERT INTO ui.masterextractattribs (attribpath, level, datatype, displayname) VALUES ('vcattribs->''yb_raw''->>''city'' ', 'Customer', 'String', 'City');
+INSERT INTO ui.masterextractattribs (attribpath, level, datatype, displayname) VALUES ('vcattribs->''yb_raw''->>''gstn'' ', 'Customer', 'String', 'GSTN');
+INSERT INTO ui.masterextractattribs (attribpath, level, datatype, displayname) VALUES ('vcattribs->''yb_raw''->>''pinCode'' ', 'Customer', 'String', 'Pin Code');
+INSERT INTO ui.masterextractattribs (attribpath, level, datatype, displayname) VALUES ('vcattribs->''yb_raw''->>''district'' ', 'Customer', 'String', 'District');
+INSERT INTO ui.masterextractattribs (attribpath, level, datatype, displayname) VALUES ('vcattribs->''yb_raw''->>''latitude'' ', 'Customer', 'String', 'Latitude');
+INSERT INTO ui.masterextractattribs (attribpath, level, datatype, displayname) VALUES ('vcattribs->''yb_raw''->>''longitude'' ', 'Customer', 'String', 'Longitude');
+INSERT INTO ui.masterextractattribs (attribpath, level, datatype, displayname) VALUES ('vcattribs->''yb_raw''->>''partnerName'' ', 'Customer', 'String', 'Partner Name');
+INSERT INTO ui.masterextractattribs (attribpath, level, datatype, displayname) VALUES ('vcattribs->''yb_raw''->>''businessName'' ', 'Customer', 'String', 'Business Name');
+INSERT INTO ui.masterextractattribs (attribpath, level, datatype, displayname) VALUES ('vcattribs->''yb_raw''->>''mobileNumber'' ', 'Customer', 'String', 'Mobile No.');
+INSERT INTO ui.masterextractattribs (attribpath, level, datatype, displayname) VALUES ('vcattribs->''yb_raw''->>''sellerVerifiedAccountName'' ', 'Customer', 'String', 'Verified Acc. Name');
+INSERT INTO ui.masterextractattribs (attribpath, level, datatype, displayname) VALUES ('vcattribs->''yb_raw''->>''turnOverType'' ', 'Customer', 'String', 'Turnover Type');

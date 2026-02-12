@@ -1,0 +1,1 @@
+delete INDEX if exists batch.uniq_pending_jobtype_tenant;

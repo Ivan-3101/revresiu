@@ -1,0 +1,1 @@
+delete from ui.rolemenuaccessmap where imenuid =602 and itenantid in (8,17,21,22,23);

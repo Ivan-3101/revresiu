@@ -1,0 +1,3 @@
+UPDATE ui.dashboardquery SET
+vcdashboardquery = 'SELECT u.vcusername AS "User Name", r.dtactivity AS "Time stamp", r.vcactivity AS "UI", r.vcparameters AS "Query Parameter" FROM t17refined.ui.activitylog r JOIN postgresql.ui.webusermapping m ON m.webuserid = r.iuserid AND m.mappingid = :tenantid AND m.mappingtype = ''Tenant'' LEFT JOIN postgresql.ui.webuser u ON u.iuserid = r.iuserid WHERE r.dtactivity >= :StartDate AND r.dtactivity <= :EndDate LIMIT 50000'::text WHERE
+itenantid = 21 AND idashboardqueryid = 175;

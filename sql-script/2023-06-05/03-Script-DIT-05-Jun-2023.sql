@@ -1,0 +1,1 @@
+INSERT INTO ui.workflowmasters (workflowid, workflowname, workflowkey) VALUES (12, 'Risk Alert', 'YbFrmAlert');

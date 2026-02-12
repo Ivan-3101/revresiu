@@ -1,0 +1,4 @@
+INSERT INTO ui.masterconfig (
+iconfigid, bdelete, configjson, configname) VALUES (
+'2'::integer, false::boolean, '{"entityoptions":[{"value":"account","label":"Account"},{"value":"vpa","label":"Vpa"}],"tableoptions":[{"value":"account_monthly","label":"account_monthly","valueLogic":["account","monthly"]},{"value":"account_weekly","label":"account_weekly","valueLogic":["account","weekly"]},{"value":"account","label":"account","valueLogic":["account","daily"]},{"value":"vpa_monthly","label":"vpa_monthly","valueLogic":["vpa","monthly"]},{"value":"vpa","label":"vpa","valueLogic":["vpa","daily"]},{"value":"vpa_weekly","label":"vpa_weekly","valueLogic":["vpa","weekly"]}],"durationoptions":[{"value":"daily","label":"Daily"},{"value":"monthly","label":"Monthly"},{"value":"weekly","label":"Weekly"}]}'::jsonb, 'Decision Form Config'::character varying)
+ returning iconfigid;

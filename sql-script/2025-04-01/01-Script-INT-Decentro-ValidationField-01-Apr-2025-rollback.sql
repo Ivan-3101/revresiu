@@ -1,0 +1,1 @@
+Delete from ui.validationfieldslist where itenantid = 25;

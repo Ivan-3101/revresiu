@@ -1,0 +1,90 @@
+version: '3.4'
+
+networks:
+  frm-net:
+    name: frm-net
+
+services:
+
+  # postgresql:
+  #   image: "postgres:14"
+  #   container_name: postgresqltest
+  #   networks:
+  #     - frm-net
+  #   ports:
+  #     - "5431:5432"
+  #   environment:
+  #     POSTGRES_PASSWORD : "aniket"
+
+  # camunda:
+  #   image: "camunda/camunda-bpm-platform:tomcat-latest"
+  #   container_name: camunda
+  #   networks:
+  #     - frm-net
+  #   ports:
+  #     - "8084:8080"
+  #   volumes:
+  #     - /c/camunda/:/camunda/mnt/d/docker_data/logs
+
+  # camundapsqldit:
+  #   image: camunda/camunda-bpm-platform:tomcat-7.17.0
+  #   container_name: camundapsqldit
+  #   hostname: camundapsqldit
+  #   networks:
+  #     - frm-net
+  #   environment:
+  #     TZ: "Asia/Calcutta"
+  #     DB_DRIVER: org.postgresql.Driver
+  #     DB_URL: jdbc:postgresql://164.52.214.164:5442/devdblocal
+  #     DB_USERNAME: appuserdevdblocal
+  #     DB_PASSWORD: Drona!1234
+# #      WAIT_FOR: postgresqltest:5432
+  #   volumes:
+  #     - /c/camunda/:/camunda/logs
+  #     - /c/camunda/logback:/camunda/webapps/logback
+  #   ports:
+  #     - 7031:8080
+
+  # camundapsql42c:
+  #   image: camunda/camunda-bpm-platform:tomcat-7.17.0
+  #   container_name: camundapsql42c
+  #   hostname: camundapsql42c
+  #   networks:
+  #     - frm-net
+  #   environment:
+  #     TZ: "Asia/Calcutta"
+  #     DB_DRIVER: org.postgresql.Driver
+  #     DB_URL: jdbc:postgresql://postgresqltest:5432/postgres
+  #     DB_USERNAME: postgres
+  #     DB_PASSWORD: aniket
+  #   #      WAIT_FOR: postgresqltest:5432
+  #   volumes:
+  #     - /c/camunda/:/camunda/logs
+  #     - /c/camunda/logback:/camunda/webapps/logback
+  #   ports:
+  #     - 7051:8080
+
+  uiserver:
+    image: uiserver
+    container_name: uiserver
+    networks:
+      - frm-net
+    build:
+      context: src
+      dockerfile: ./Dockerfile
+    ports:
+      - 6060:8085
+    volumes:
+      - /home/imtiyaz/work/drona/apps/yb/logs/
+      # - /c/testvalume/:/mnt/d/docker_data/
+
+  # dronaui:
+  #   image: dronaui
+  #   container_name: dronaui
+  #   networks:
+  #     - frm-net
+  #   build:
+  #     context: src
+  #     dockerfile: ./Dockerfile
+  #   ports:
+  #     - 3001:3000

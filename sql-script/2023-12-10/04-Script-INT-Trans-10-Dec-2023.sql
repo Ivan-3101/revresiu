@@ -1,0 +1,43 @@
+CREATE OR REPLACE VIEW analytics.combined_rule_triggered
+ AS
+ SELECT rt.dttrxntime AS "Txn Date Time",
+    rt.vcmsgid AS "Txn ID",
+    NULL::character varying AS "Payer Customer ID",
+    NULL::character varying AS "Payer Account ID",
+    NULL::character varying AS "Payer VPA ID",
+    NULL::character varying AS "Payee Customer ID",
+    NULL::character varying AS "Payee Account ID",
+    NULL::character varying AS "Payee VPA ID",
+    rt.vccustomerexternalid AS "Customer ID",
+    rt.vcaccountexternalid AS "Account ID",
+    rt.vcaddr AS "VPA ID",
+    rt.vcclassname AS "Txn Class",
+    NULL::numeric AS "Txn Amount",
+    rt.vcdecisionname AS "Decision Name",
+    rt.iruleid AS "Rule ID",
+    rt.vcrulename AS "Rule Name",
+    rt.rule_score AS "Score",
+    rt.vcremark AS "Side",
+    rt.itenantid AS "Tenant ID"
+   FROM analytics.batch_rule_triggered rt
+UNION
+ SELECT rt.dttrxntime AS "Txn Date Time",
+    rt.vcmsgid AS "Txn ID",
+    rt.vcpayercustomerexternalid AS "Payer Customer ID",
+    rt.vcpayeraccountexternalid AS "Payer Account ID",
+    rt.vcpayeraddr AS "Payer VPA ID",
+    rt.vcpayeecustomerexternalid AS "Payee Customer ID",
+    rt.vcpayeeaccountexternalid AS "Payee Account ID",
+    rt.vcpayeeaddr AS "Payee VPA ID",
+    NULL::character varying AS "Customer ID",
+    NULL::character varying AS "Account ID",
+    NULL::character varying AS "VPA ID",
+    rt.vcclassname AS "Txn Class",
+    rt.dobservationamount AS "Txn Amount",
+    rt.vcdecisionname AS "Decision Name",
+    rt.iruleid AS "Rule ID",
+    rt.vcrulename AS "Rule Name",
+    rt.rule_score AS "Score",
+    rt.vcremark AS "Side",
+    rt.itenantid AS "Tenant ID"
+   FROM analytics.rule_triggered rt;

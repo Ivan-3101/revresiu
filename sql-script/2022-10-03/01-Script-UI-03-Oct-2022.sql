@@ -1,0 +1,2 @@
+Alter table ui.observationwindowsuiaudit drop constraint fkayjdn104jkfvmr1unakg5t81;
+Alter table ui.observationsuiaudit drop constraint fkqoifj7hc6xs214fftegx0tjat;

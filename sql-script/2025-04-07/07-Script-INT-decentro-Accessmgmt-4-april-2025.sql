@@ -1,0 +1,906 @@
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    583 AS imenuid, 
+    1 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--add custom aggregation
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    585 AS imenuid, 
+    1 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--delete custom aggregation
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    586 AS imenuid, 
+    1 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--approve custom aggregation
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    587 AS imenuid, 
+    1 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--view custom aggregation
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    588 AS imenuid, 
+    1 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--add email schedular
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    589 AS imenuid, 
+    1 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--view email schedular
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    590 AS imenuid, 
+    1 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--edit email schedular
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    591 AS imenuid, 
+    1 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--delete email schedular
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    592 AS imenuid, 
+    1 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--approve add decision
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    584 AS imenuid, 
+    1 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--approve edit decision
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    597 AS imenuid, 
+    1 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--approve delete decision
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    598 AS imenuid, 
+    1 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--approve edit observation
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    600 AS imenuid, 
+    1 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--metadata /add
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    593 AS imenuid, 
+    1 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+
+---metadats/view
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    594 AS imenuid, 
+    1 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--metadata/delete
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    595 AS imenuid, 
+    1 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--metadata approve
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    596 AS imenuid, 
+    1 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+-------------
+
+----add decision
+
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    583 AS imenuid, 
+    2 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--add custom aggregation
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    585 AS imenuid, 
+    2 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--delete custom aggregation
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    586 AS imenuid, 
+    2 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--view custom aggregation
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    588 AS imenuid, 
+    2 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--metadata /add
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    593 AS imenuid, 
+    2 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+
+---metadats/view
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    594 AS imenuid, 
+    2 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--metadata/delete
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    595 AS imenuid, 
+    2 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+------------------------
+
+--view custom aggregation
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    588 AS imenuid, 
+    5 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+
+---metadats/view
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    594 AS imenuid, 
+    5 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+-----------
+
+--view custom aggregation
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    588 AS imenuid, 
+    4 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+--view email schedular
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    590 AS imenuid, 
+    4 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);
+
+---metadats/view
+INSERT INTO ui.rolemenuaccessmap 
+    (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, 
+     dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, 
+     imenuid, iroleid, itenantid, iorgid)
+SELECT 
+    (select max(irolemenumapid) + 1 from ui.rolemenuaccessmap) AS irolemenumapid,  
+    true AS badd, 
+    true AS bapprove, 
+    true AS bdelete, 
+    true AS bedit, 
+    true AS bpublish, 
+    true AS bview, 
+    NULL AS dtapproverstamp, 
+    NULL AS dtentrystamp, 
+    true AS istatus, 
+    NULL AS iapproveruserid, 
+    NULL AS ientryuserid, 
+    594 AS imenuid, 
+    4 AS iroleid, 
+    t.itenantid, 
+    o.iorgid
+FROM 
+    ui.tenants t 
+JOIN 
+    ui.orgs o 
+ON 
+    t.iorgid = o.iorgid
+WHERE 
+    t.itenantid  in (25);

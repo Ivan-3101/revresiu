@@ -1,0 +1,5 @@
+UPDATE ui.dashboardquery SET
+vcdashboardquery = 'SELECT r.wname as "Window Name", r.wdesc as  "Window Description", r.wid "Window ID", makeruser.vcusername as "Maker User", r.dtentrystamp at time zone ''asia/kolkata'' as "Maker Time Stamp", r.vcremark as "Maker & Checker Remarks", checkeruser.vcusername as "Checker User", r.dtapproverstamp at time zone ''asia/kolkata'' as "Checker Time Stamp", case when r.vcaction = ''A'' then ''Add'' when r.vcaction = ''M'' then ''Modify'' when r.vcaction = ''X'' then ''Delete'' when r.vcaction = ''N'' then ''No Change'' end as "Action", cast(r.selectexpr as text) as "Select", cast(r.whereexpr as text) as "Where", cast(r.groupbyexpr as text) as "Group By", r.wcount as "Window Count", r.wduration as "Window Duration" FROM ui.observationwindowsuiaudit r left join ui.webuser makeruser on makeruser.iuserid = r.ientryuserid left join ui.webuser checkeruser on checkeruser.iuserid = r.iapproveruserid where cast(r.dtentrystamp at time zone :timeZone as date) between cast(:StartDate as date) and cast(:EndDate as date)-1;'::text WHERE
+idashboardqueryid = 85;
+
+

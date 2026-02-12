@@ -1,0 +1,1 @@
+Alter table masters.rules Alter column vcruledetail type text;

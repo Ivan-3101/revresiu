@@ -1,0 +1,61 @@
+image: docker:19.03.13
+stages:
+  - package
+  - build
+  - deploy
+  
+#variables:
+#  DOCKER_HOST: tcp://docker:2375
+#  DOCKER_TLS_CERTDIR: ""
+
+services:
+  - docker:19.03.13-dind
+
+build_artifacts:
+  image: maven:3.8-openjdk-11
+  stage: package
+  script:
+    - mvn clean install
+  artifacts:
+    paths:
+      - target/*.jar
+
+build_uiserver:
+  stage: build
+  image: 
+    name: amazon/aws-cli
+    entrypoint: [""]
+  services:
+    - docker:dind
+  before_script:
+    - amazon-linux-extras install docker
+    - aws --version
+    - docker --version
+  script:
+    - echo "build"
+    - docker build -t 287521686904.dkr.ecr.us-east-1.amazonaws.com/uiserver .
+    - docker tag 287521686904.dkr.ecr.us-east-1.amazonaws.com/uiserver:latest 287521686904.dkr.ecr.us-east-1.amazonaws.com/uiserver:$CI_COMMIT_SHA
+    - aws ecr get-login-password | docker login --username AWS --password-stdin $DOCKER_REGISTRY
+    - docker push 287521686904.dkr.ecr.us-east-1.amazonaws.com/uiserver:latest
+    - docker push 287521686904.dkr.ecr.us-east-1.amazonaws.com/uiserver:$CI_COMMIT_SHA
+  only:
+    - main
+
+deploy-master:
+  stage: deploy
+  image: alpine:3.14
+  before_script:
+    - apk add --no-cache git curl bash
+    - wget https://github.com/mikefarah/yq/releases/download/v4.2.0/yq_linux_amd64 -O /usr/bin/yq
+    - chmod +x /usr/bin/yq
+    - apk add yq
+  script:
+    - git clone --branch validation_hema --single-branch https://pravin30:glpat-dBJPjyXNQEyj7BvYKW3f@gitlab.com/d3649/devops/iac.git
+    - cd iac/helm-charts/uiserver
+    - IMAGE_TAG=$CI_COMMIT_SHA yq e '.image.tag=env(IMAGE_TAG)' -i values.yaml
+    - git config user.email "pravin@dronapay.com"
+    - git config user.name "pravin30"
+    - git commit -am "$CI_COMMIT_MESSAGE"
+    - git push origin
+  only:
+  - main

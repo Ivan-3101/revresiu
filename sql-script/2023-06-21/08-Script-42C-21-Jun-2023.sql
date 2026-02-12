@@ -1,0 +1,2 @@
+update ui.emailtemplate set subject='Real Time [(${type})]: [(${alert})] (Account#:[(${accountid})]. Last 4 Digits of Card:[(${lastfourdigit})] Transaction Amount:[(${amount})] - [(${type}  == ''Alert'' ? ''Approved'':''Declined'')])'
+where id=2;

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="baseDir" value="/mnt/d/docker_data/logs" />
+    <property name="appUiserver" value="uiserver-prod" />
+    <property name="appUi" value="dronaui-prod" />
+
+    <appender name="Console"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %green(%d{ISO8601}) %highlight(%-5level) [%blue(%t)] %yellow(%C{1}): %msg%n%throwable
+            </Pattern>
+        </layout>
+    </appender>
+
+    <appender name="RollingFileAppUiserver"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${baseDir}/${appUiserver}.log</file>
+
+        <encoder
+                class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>%d %L %p %C{1} [%t] %m%n</Pattern>
+        </encoder>
+
+        <rollingPolicy
+                class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- rollover daily and when the file reaches 10 MegaBytes -->
+            <fileNamePattern>${baseDir}/archived/${appUiserver}-%d{yyyy-MM-dd}.%i.log
+            </fileNamePattern>
+            <maxFileSize>10MB</maxFileSize>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="RollingFileAppUi"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${baseDir}/${appUi}.log</file>
+        <encoder
+                class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>%d %p %C{1} [%t] %m%n</Pattern>
+        </encoder>
+
+        <rollingPolicy
+                class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+
+            <!-- rollover daily and when the file reaches 10 MegaBytes -->
+            <fileNamePattern>${baseDir}/archived/${appUi}-%d{yyyy-MM-dd}.%i.log
+            </fileNamePattern>
+            <maxFileSize>10MB</maxFileSize>
+        </rollingPolicy>
+    </appender>
+
+    <!-- LOG everything at INFO level -->
+    <logger name="appuilogger" level="DEBUG" additivity="false">
+        <appender-ref ref="RollingFileAppUi"/>
+    </logger>
+
+    <!-- <logger name="org.springframework" level="warn"/>
+    <logger name="com.zaxxer.hikari" level="warn"/>
+    <logger name="com.dronapay" level="info"/> -->
+    <root level="info">
+        <appender-ref ref="RollingFileAppUiserver"/>
+        <appender-ref ref="Console" />
+    </root>
+
+</configuration>

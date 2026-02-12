@@ -1,0 +1,1 @@
+Alter Table masters.rules Drop Column iproductid;

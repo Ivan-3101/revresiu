@@ -1,0 +1,2 @@
+DELETE FROM ui.menustructuredesc
+WHERE imenuid IN (604, 605, 606, 607, 608, 609, 610, 611, 612, 613, 614, 615, 616, 617, 618, 619, 620, 621, 622);

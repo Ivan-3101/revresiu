@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: db-credentials
+data:
+ username: YWxnb2VuZ2luZXM=
+ password: YWxnb2VuZ2luZXM=

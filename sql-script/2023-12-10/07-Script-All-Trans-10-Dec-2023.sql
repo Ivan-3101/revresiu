@@ -1,0 +1,1 @@
+ALTER TABLE IF EXISTS ui.masterextractattribs ADD COLUMN itenantid integer;

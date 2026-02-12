@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX uniq_pending_jobtype_tenant ON batch.batch_job (jobtypeid, itenantid) WHERE jobstatus = 'PENDING';

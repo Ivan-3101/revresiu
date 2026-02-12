@@ -1,0 +1,3 @@
+update ui.workflowmasters set idecisionid = 
+(select idecisionid from ui.decisions where vcdecisionname='PL_MANUAL_DECISION')
+where workflowid=16 and itenantid=10;

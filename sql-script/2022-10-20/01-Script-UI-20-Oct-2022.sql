@@ -1,0 +1,1 @@
+UPDATE ui.dashboardfilters SET idashboardqueryidfordefaultvalue=16 WHERE idashboardfilterid=30;

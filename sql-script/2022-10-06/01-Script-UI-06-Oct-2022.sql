@@ -1,0 +1,3 @@
+INSERT INTO ui.menustructuredesc (imenuid, bcollapse, dtapproverstamp, dtentrystamp, isortorder, vcaction, vccontroller, vchelptip, vcicon, vclayout, vcmenuname, vcmini, vcpath, vcrtlmini, vcrtlname, vcstate, ispproveruserid, ientryuserid, iparentmenu, istatus) VALUES (561, false, NULL, NULL, 5, 'Historic Profile', 'HistoricProfile', NULL, NULL, '/user', 'Historic Profile', 'HP', '/masters/historic-profile-management/list', NULL, NULL, NULL, NULL, NULL, 481, 1);
+
+INSERT INTO ui.rolemenuaccessmap (irolemenumapid, badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid) VALUES (674, true, true, true, true, true, true, NULL, NULL, true, NULL, NULL, 561, 1);

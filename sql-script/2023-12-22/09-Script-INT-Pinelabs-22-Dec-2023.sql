@@ -1,0 +1,28 @@
+DELETE FROM ui.profileparamsconfig where workflowid = 16;
+
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'First Trans Date_Payee','account');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'First Trans Date_Payer','account');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'Last Trans Date_Payer','account');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'Last Trans Date_Payee','account');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'Total Count_P30_Payer','vpa');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'Total Count_P30_Payee','vpa');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'Total Value_P30_Payee','account');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'Total Value_P30_Payer','account');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'Total Value_PAll_Payee','account');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'Total Value_PAll_Payer','account');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'Total Count_Payer','account');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'Total Count_Payee','account');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'Max Value_P90_Payer','account');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'Highest_Day_Volume','account');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'totalCount_chargeback_payee','account');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'totalCount_chargeback_payer','vpa');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'totalValue_chargeback_payee','account');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'totalValue_chargeback_payer','vpa');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'TotalCount_p45d_online_payer','vpa');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'TotalValue_p45d_online_payer','vpa');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'AvgCount_p30d_payee','account');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'avgValue_p30d_payee','account');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'TotalCount_p45d_UPI_payer','vpa');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'TotalValue_p45d_UPI_payer','vpa');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'TotalCount_p45d_offline_payer','vpa');
+INSERT INTO ui.profileparamsconfig(workflowid, parametername,type) VALUES (16, 'TotalValue_p45d_offline_payer','vpa');

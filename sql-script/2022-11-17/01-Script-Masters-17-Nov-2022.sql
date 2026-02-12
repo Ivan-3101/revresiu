@@ -1,0 +1,1 @@
+alter table if exists masters.rulesavailable add column vcruledetail text

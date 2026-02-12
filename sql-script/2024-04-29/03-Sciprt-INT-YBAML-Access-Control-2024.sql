@@ -1,0 +1,12 @@
+
+INSERT INTO ui.rolemenuaccessmap ( badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid, itenantid, iorgid) SELECT true, true, true, true, true, true, NULL, NULL, true, NULL, NULL, 480, 5, 8, 5;
+INSERT INTO ui.rolemenuaccessmap ( badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid, itenantid, iorgid) SELECT true, true, true, true, true, true, NULL, NULL, true, NULL, NULL, 574, 5, 8, 5;
+INSERT INTO ui.rolemenuaccessmap ( badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid, itenantid, iorgid) SELECT true, true, true, true, true, true, NULL, NULL, true, NULL, NULL, 573, 5, 8, 5;
+
+INSERT INTO ui.rolemenuaccessmap ( badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid, itenantid, iorgid) SELECT true, true, true, true, true, true, NULL, NULL, true, NULL, NULL, 480, 5, 16, 5;
+INSERT INTO ui.rolemenuaccessmap ( badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid, itenantid, iorgid) SELECT true, true, true, true, true, true, NULL, NULL, true, NULL, NULL, 574, 5, 16, 5;
+INSERT INTO ui.rolemenuaccessmap ( badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid, itenantid, iorgid) SELECT true, true, true, true, true, true, NULL, NULL, true, NULL, NULL, 573, 5, 16, 5;
+
+INSERT INTO ui.rolemenuaccessmap ( badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid, itenantid, iorgid) SELECT true, true, true, true, true, true, NULL, NULL, true, NULL, NULL, 480, 5, 17, 5;
+INSERT INTO ui.rolemenuaccessmap ( badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid, itenantid, iorgid) SELECT true, true, true, true, true, true, NULL, NULL, true, NULL, NULL, 574, 5, 17, 5;
+INSERT INTO ui.rolemenuaccessmap ( badd, bapprove, bdelete, bedit, bpublish, bview, dtapproverstamp, dtentrystamp, istatus, iapproveruserid, ientryuserid, imenuid, iroleid, itenantid, iorgid) SELECT true, true, true, true, true, true, NULL, NULL, true, NULL, NULL, 573, 5, 17, 5;

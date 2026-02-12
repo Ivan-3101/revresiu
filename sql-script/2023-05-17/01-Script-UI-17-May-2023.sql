@@ -1,0 +1,1 @@
+UPDATE ui.rolemenuaccessmap SET  bapprove=false WHERE iroleid = 5 and bview = false and imenuid = 501;

@@ -1,0 +1,28 @@
+package com.DronaPay.UIServer.controller.TryOut;
+
+
+import com.DronaPay.UIServer.service.ControllerService.TryOut.AnalyzeSimulationControllerService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+@RestController
+@RequestMapping("/api/v1/try-out/analyze-simulation")
+public class AnalyzeSimulationController {
+
+
+    @Autowired
+    private AnalyzeSimulationControllerService AnalyzeSimulationControllerService;
+
+    @GetMapping("/get-simulation-and-run-dropdown/tenant-id/{tenantid}")
+    public ResponseEntity<?> getSimulationAndRunDropDown(Authentication pr, @PathVariable("tenantid") Integer tenantid) {
+        return AnalyzeSimulationControllerService.getSimulationAndRunDropDown(pr, tenantid);
+    }
+
+
+}

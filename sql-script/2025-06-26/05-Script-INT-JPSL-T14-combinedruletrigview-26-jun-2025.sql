@@ -1,0 +1,48 @@
+
+CREATE VIEW t14refined.analytics.combined_rule_triggered SECURITY DEFINER AS
+SELECT
+  t.dttrxntime "Txn Date Time"
+, t.vcmsgid "Unique ID"
+, CAST(null AS VARCHAR) "Txn ID"
+, CAST(null AS VARCHAR) "Payer Customer ID"
+, CAST(null AS VARCHAR) "Payer Account ID"
+, CAST(null AS VARCHAR) "Payer VPA ID"
+, CAST(null AS VARCHAR) "Payee Customer ID"
+, CAST(null AS VARCHAR) "Payee Account ID"
+, CAST(null AS VARCHAR) "Payee VPA ID"
+, t.vccustomerexternalid "Customer ID"
+, t.vcaccountexternalid "Account ID"
+, t.vcaddr "VPA ID"
+, t.vcclassname "Txn Class"
+, CAST(null AS DOUBLE) "Txn Amount"
+, t.vcdecisionname "Decision Name"
+, t.iruleid "Rule ID"
+, t.vcrulename "Rule Name"
+, t.rule_score "Score"
+, t.vcremark "Side"
+, t.itenantid "Tenant ID"
+FROM
+  t14refined.analytics.batch_rule_triggered t
+UNION ALL SELECT
+  rt.dttrxntime "Txn Date Time"
+, rt.vcmsgid "Unique ID"
+, rt.vcuniquetransid "Txn ID"
+, rt.vcpayercustomerexternalid "Payer Customer ID"
+, rt.vcpayeraccountexternalid "Payer Account ID"
+, rt.vcpayeraddr "Payer VPA ID"
+, rt.vcpayeecustomerexternalid "Payee Customer ID"
+, rt.vcpayeeaccountexternalid "Payee Account ID"
+, rt.vcpayeeaddr "Payee VPA ID"
+, CAST(null AS VARCHAR) "Customer ID"
+, CAST(null AS VARCHAR) "Account ID"
+, CAST(null AS VARCHAR) "VPA ID"
+, rt.vcclassname "Txn Class"
+, rt.dobservationamount "Txn Amount"
+, rt.vcdecisionname "Decision Name"
+, rt.iruleid "Rule ID"
+, rt.vcrulename "Rule Name"
+, rt.rule_score "Score"
+, rt.vcremark "Side"
+, rt.itenantid "Tenant ID"
+FROM
+  t14refined.analytics.rule_triggered rt;

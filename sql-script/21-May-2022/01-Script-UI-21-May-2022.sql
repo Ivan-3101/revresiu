@@ -1,0 +1,1 @@
+Alter table ui.rulesaudit Alter Column vcruledetail type text;
